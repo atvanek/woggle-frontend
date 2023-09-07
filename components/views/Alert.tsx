@@ -1,9 +1,9 @@
 'use client';
 
-import { Collapse, Alert } from '@mui/material';
+import { Collapse, Alert as MUIAlert } from '@mui/material';
 import { useRootSelector } from '@/redux/hooks';
 
-function Alerts() {
+function Alert() {
 	const { active, type, message } = useRootSelector(
 		(state) => state.game.alert
 	);
@@ -11,10 +11,10 @@ function Alerts() {
 	return (
 		<div id='alert-wrapper'>
 			<Collapse in={active}>
-				<Alert severity={type}>{message}</Alert>
+				<MUIAlert severity={type}>{message}</MUIAlert>
 			</Collapse>
 		</div>
 	);
 }
 
-export default Alerts;
+export default Alert;

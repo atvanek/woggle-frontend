@@ -1,4 +1,3 @@
-// import BlockContainer from '@/components/containers/BlockContainer';
 import Block from './Block';
 
 type RowProps = {
